@@ -1,7 +1,6 @@
 .footer {
 	background-color: var(--color-white);
-	padding-top: 37px;
-	padding-bottom: 36px;
+	padding: 37px 0 36px;
 }
 
 .footer__container {
@@ -9,11 +8,22 @@
 }
 
 .footer__text {
-	color: #888;
-	font-family: 'Poppins', sans-serif;
+	color: var(--color-gray);
 	font-size: 16px;
 	font-weight: 400;
 	line-height: 32px; /* 200% */
 	text-transform: capitalize;
 	margin: 0;
+}
+
+/* Media queries for responsive adjustments */
+@media (max-width: 768px) {
+
+	.footer {
+		padding: 28px 0;
+	}
+
+	.footer__text {
+		font-size: 16px;
+	}
 }

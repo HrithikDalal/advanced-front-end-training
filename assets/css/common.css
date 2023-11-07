@@ -2,7 +2,9 @@
 	--color-primary: #1E5542;
 	--color-dark: #161A0B;
 	--color-green: #1E5542;
+	--color-light-green: #EBF0EE;
 	--color-white: #FFF;
+	--color-gray: #888;
 }
 
 body {
@@ -28,4 +30,16 @@ a {
 	max-width: 1320px;
 	margin: 0 auto;
 	padding: 0 16px;
+}
+
+p {
+	margin: 16px 0;
+}
+
+/* Media queries for responsive adjustments */
+@media (max-width: 768px) {
+
+	body {
+		background: var(--color-light-green);
+	}
 }

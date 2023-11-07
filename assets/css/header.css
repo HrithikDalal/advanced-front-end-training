@@ -107,17 +107,14 @@
 		margin-left: 16px;
 	}
 
-	.header__signup-link {
-		order: 1; /* Sign up link comes before hamburger icon on mobile */
-	}
-
 	.header__nav--active {
 		position: absolute;
 		flex-direction: column;
 		top: 100%;
 		left: 0;
 		width: calc(100% - 32px);
-		padding: 0 16px;
+		padding: 16px;
+		background-color: var(--color-light-green);
 	}
 
 	.header__nav--active .header__nav-list,
