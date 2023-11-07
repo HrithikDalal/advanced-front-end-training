@@ -1,0 +1,31 @@
+:root {
+	--color-primary: #1E5542;
+	--color-dark: #161A0B;
+	--color-green: #1E5542;
+	--color-white: #FFF;
+}
+
+body {
+	font-family: 'Poppins', sans-serif;
+	background: rgba(30, 85, 66, 0.09);
+	margin: 0px;
+}
+
+/* Reset some default styling */
+ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+.container {
+	width: calc(100% - 32px);
+	max-width: 1320px;
+	margin: 0 auto;
+	padding: 0 16px;
+}

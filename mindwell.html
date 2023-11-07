@@ -6,12 +6,60 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>MindWell Hub</title>
 		<!-- Google Font Link for Poppins -->
-		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<!-- Preconnect to Google Fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<!-- Preload Poppins font -->
+		<link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" as="style">
+		<!-- Google Font Link for Poppins -->
 		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-		<link rel="stylesheet" href="styles.css"> <!-- Link to external CSS file -->
+		<link rel="stylesheet" href="./assets/css/main.css"> <!-- Link to external CSS file -->
 	</head>
 	<body>
-		<!-- The rest of your HTML content -->
+		<header class="header">
+			<div class="container header__container">
+				<div class="site__branding">
+					<a href="/" aria-label="MindWell Hub home">
+						<img src="assets/images/mindwell-hub-logo.svg" alt="MindWell Hub Logo" />
+					</a>
+				</div>
+				<div class="header__nav-conatiner">
+
+					<nav class="header__nav">
+						<ul class="header__nav-list">
+							<li class="header__nav-item">
+								<a href="#practitioners" class="header__nav-link active">Practitioners</a>
+							</li>
+							<li class="header__nav-item">
+								<a href="#resources" class="header__nav-link">Resources</a>
+							</li>
+							<li class="header__nav-item">
+								<a href="#blog" class="header__nav-link">Blog</a>
+							</li>
+							<li class="header__nav-item">
+								<a href="#forum" class="header__nav-link">Forum</a>
+							</li>
+						</ul>
+						<a href="#sign-in" class="header__sign-in">Sign In</a>
+					</nav>
+
+					<a href="#" class="header__sign-up">Sign Up</a>
+					<!-- Hamburger menu button -->
+					<button class="header__menu-toggle" aria-label="Menu" aria-expanded="false">
+						<svg xmlns="http://www.w3.org/2000/svg" width="20" height="15" viewBox="0 0 20 15" fill="none">
+							<path fill-rule="evenodd" clip-rule="evenodd" d="M0 1.5C0 0.671573 0.671573 0 1.5 0H12.5C13.3284 0 14 0.671573 14 1.5C14 2.32843 13.3284 3 12.5 3H1.5C0.671573 3 0 2.32843 0 1.5ZM0 7.5C0 6.67157 0.671573 6 1.5 6H18.5C19.3284 6 20 6.67157 20 7.5C20 8.32843 19.3284 9 18.5 9H1.5C0.671573 9 0 8.32843 0 7.5ZM1.5 12C0.671573 12 0 12.6716 0 13.5C0 14.3284 0.671573 15 1.5 15H5.5C6.32843 15 7 14.3284 7 13.5C7 12.6716 6.32843 12 5.5 12H1.5Z" fill="#1E5542"/>
+						</svg>
+					</button>
+				</div>
+			</div>
+		</header>
+		<main id="main-content">
+			<!-- The primary content of the webpage -->
+		</main>
+		<footer>
+			<!-- Footer content -->
+		</footer>
+		<!-- External JavaScript File -->
+		<script src="./assets/javascript/main.js" async></script>
 	</body>
 </html>

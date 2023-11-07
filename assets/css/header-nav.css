@@ -1,0 +1,143 @@
+
+/* Header styles */
+.header {
+	width: 100%;
+	padding: 52px 0;
+	position: relative;
+}
+
+.header__container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.site__branding {
+	width: 209px;
+	height: 30px;
+}
+
+.site__branding img {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+}
+
+.header__nav-conatiner {
+	display: flex;
+	align-items: center;
+}
+
+.header__nav {
+	display: flex;
+	align-items: center;
+}
+
+.header__nav-list {
+	display: flex;
+	margin-right: 72px; /* Space between nav items and sign-in link */
+}
+
+.header__nav-item {
+	margin-right: 48px; /* Space between nav items */
+}
+
+.header__nav-item:last-child {
+	margin-right: 0;
+}
+
+.header__nav-link {
+	color: var(--color-dark);
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 24px;
+	opacity: 0.5;
+}
+
+.header__nav-link:hover,
+.header__nav-link.active {
+	opacity: 1;
+}
+
+.header__sign-in {
+	color: var(--color-green);
+	font-size: 15px;
+	font-weight: 500;
+	margin-right: 32px; /* Space between sign in and sign up */
+}
+
+.header__sign-up {
+	background: var(--color-primary);
+	color: var(--color-white);
+	text-align: center;
+	font-size: 15px;
+	font-weight: 500;
+	border-radius: 32px;
+	padding: 7px 31px 8px 30px;
+	line-height: 30px;
+	width: 62px;
+}
+
+.header__menu-toggle {
+	display: none; /* Hide hamburger menu on desktop */
+}
+
+/* Media queries for responsive adjustments */
+@media (max-width: 768px) {
+
+	.header {
+		padding: 21px 0;
+	}
+
+	.site__branding {
+		width: 154.5px;
+		height: 18px;
+	}
+
+	.header__nav-list,
+	.header__sign-in {
+		display: none;
+	}
+
+	.header__menu-toggle {
+		display: block;
+		order: 3;
+		border: none;
+		padding: 0;
+		margin-left: 16px;
+	}
+
+	.header__signup-link {
+		order: 1; /* Sign up link comes before hamburger icon on mobile */
+	}
+
+	.header__nav--active {
+		position: absolute;
+		flex-direction: column;
+		top: 100%;
+		left: 0;
+		width: calc(100% - 32px);
+		padding: 0 16px;
+	}
+
+	.header__nav--active .header__nav-list,
+	.header__nav--active .header__sign-in {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		width: 100%;
+		margin: 0;
+	}
+
+	.header__nav-item {
+		width: 100%;
+		text-align: center;
+		margin: 0;
+	}
+
+	.header__nav-link {
+		display: inline-block;
+		width: 100%;
+		text-align: left;
+	}
+}
