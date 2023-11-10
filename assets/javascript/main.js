@@ -1,7 +1,7 @@
 if (document.readyState !== 'loading') {
 	toggleMobileMenu();
-	// Call fetchFaqPosts function to load posts and display them
-	// fetchFaqPosts();
+	// // Call fetchFaqPosts function to load posts and display them
+	fetchFaqPosts();
 } else {
 	document.addEventListener('DOMContentLoaded', (event) => {
 		toggleMobileMenu();
@@ -25,7 +25,6 @@ function toggleMobileMenu() {
 function fetchFaqPosts() {
 	// Display the loading message
 	const loadingDiv = document.getElementById('loading');
-	loadingDiv.style.display = 'block';
 
 	fetch('https://jsonplaceholder.typicode.com/posts')
 	.then(response => response.json()) // Parse the JSON response

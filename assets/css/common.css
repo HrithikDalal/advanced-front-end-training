@@ -36,6 +36,10 @@ p {
 	margin: 16px 0;
 }
 
+.heading--bold {
+	font-weight: 600;
+}
+
 /* Media queries for responsive adjustments */
 @media (max-width: 768px) {
 
