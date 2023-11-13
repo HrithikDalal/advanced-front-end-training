@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js">
 	<head>
 		<meta charset="UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,9 +10,9 @@
 		<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<!-- Preload Poppins font -->
-		<link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" as="style">
+		<link rel="preload" href="https://fonts.googleapis.com/css2?family=Lato&family=Poppins:wght@300;400;500;600;700&display=swap" as="style">
 		<!-- Google Font Link for Poppins -->
-		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Lato&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 		<link rel="stylesheet" href="./assets/css/main.css"> <!-- Link to external CSS file -->
 	</head>
 	<body>
@@ -92,6 +92,141 @@
 					</div>
 				</div>
 			</section>
+
+			<section class="contact-form">
+				<div class="contact-form__container container">
+					<h2 class="contact-form__header">Empowering <span class="heading--bold">Minds, Nurturing Well-being</span></h2>
+					<form id="multiStepForm" novalidate>
+						<div class="form-step active" id="step1">
+							<div class="form-row">
+								<div class="form-group">
+									<label for="firstName">First Name:</label>
+									<input type="text" id="firstName" name="firstName" placeholder="Your Name" required>
+									<span class="error-message"></span>
+								</div>
+								<div class="form-group">
+									<label for="lastName">Last Name:</label>
+									<input type="text" id="lastName" name="lastName" placeholder="Your Name" required>
+									<span class="error-message"></span>
+								</div>
+							</div>
+							<div class="form-row">
+								<div class="form-group">
+									<label for="email">Email:</label>
+									<input type="email" id="email" name="email" placeholder="Email Address" required>
+									<span class="error-message"></span>
+								</div>
+								<div class="form-group">
+									<label for="dob">Date of Birth:</label>
+									<input type="date" id="dob" name="dob" placeholder="DD/MM/YY" required>
+									<span class="error-message"></span>
+								</div>
+							</div>
+							<div class="form-row">
+								<div class="form-group gender-toggle">
+									<label for="gender-toggle">Gender:</label>
+									<div class="switch-field">
+										<input type="radio" id="female" name="gender" value="Female" checked>
+										<label for="female" class="btn">Female</label>
+										<input type="radio" id="male" name="gender" value="Male">
+										<label for="male" class="btn">Male</label>
+									</div>
+									<span class="error-message"></span>
+								</div>
+								<div class="form-group">
+									<label for="relationship">Relationship:</label>
+									<select id="relationship" name="relationship" required>
+										<option value="">Select from list</option>
+										<option value="father">Father</option>
+										<option value="mother">Mother</option>
+									</select>
+									<div class="select" role="listbox">
+										<span class="value">Select from list</span>
+										<ul class="optList hidden" role="presentation">
+											<li class="option hidden" role="option">Select from list</li>
+											<li class="option" role="option">Father</li>
+											<li class="option" role="option">Mother</li>
+										</ul>
+									</div>
+									<span class="error-message"></span>
+								</div>
+							</div>
+							<div class="form-group full-width brief-description">
+								<label for="briefDescription" id="briefDescriptionLabel">Brief Description:</label>
+								<div class="file-upload" id="dropZone" aria-labelledby="briefDescriptionLabel fileHelp" aria-describedby="fileHelp">
+									<input type="file" id="briefDescription" name="briefDescription" required accept=".pdf" aria-describedby="fileHelp">
+									<svg width="28" height="24" viewBox="0 0 28 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path id="Union" fill-rule="evenodd" clip-rule="evenodd" d="M5.47089 5.31986C4.88817 6.56633 4.62436 7.88539 4.60362 9.28547C4.55026 9.30135 4.50337 9.3159 4.46064 9.32916C4.39177 9.35054 4.33373 9.36855 4.27693 9.38335C0.267894 10.3472 -1.34091 15.101 1.27583 18.2862C2.35117 19.5975 3.77005 20.2534 5.46246 20.3027C6.02444 20.3189 6.42826 19.9417 6.46197 19.4361C6.49567 18.9305 6.12232 18.5293 5.56423 18.4716C5.50171 18.4652 5.43929 18.4595 5.37702 18.4537C5.22235 18.4393 5.06854 18.425 4.91604 18.4029C3.06677 18.13 1.6602 16.3066 1.86373 14.4489C2.07374 12.5342 3.42456 11.2521 5.41968 11.0732C6.18519 11.0045 6.45743 10.7069 6.47039 9.9369C6.47302 9.78262 6.47245 9.62791 6.47187 9.47316C6.47046 9.09281 6.46905 8.71221 6.51512 8.33717C6.72696 6.57418 7.56835 4.94699 8.88448 3.75502C10.2006 2.56304 11.9029 1.88647 13.6782 1.84979C15.4535 1.81311 17.1824 2.41879 18.5466 3.55539C19.9109 4.69198 20.8187 6.28303 21.1032 8.03577C21.2808 9.11824 21.2938 9.13185 22.3432 9.38659C25.4156 10.1314 26.8423 13.7191 25.1051 16.3585C24.186 17.754 22.8507 18.4029 21.2011 18.4768C20.6508 18.4982 20.3163 18.8871 20.3267 19.4056C20.3257 19.5253 20.349 19.6439 20.3953 19.7543C20.4415 19.8647 20.5096 19.9646 20.5955 20.048C20.6814 20.1313 20.7834 20.1963 20.8951 20.2391C21.0069 20.2819 21.1262 20.3015 21.2458 20.2969C21.6782 20.2964 22.1094 20.253 22.5331 20.1672C25.4195 19.5553 27.5242 17.1376 27.6888 14.2603C27.8606 11.3104 26.0755 8.68266 23.2319 7.72399C22.9791 7.63908 22.8792 7.51722 22.8209 7.25794C21.9497 3.38891 18.7736 0.49087 14.9545 0.0611216C10.9306 -0.391313 7.16395 1.69844 5.47089 5.31986ZM14.7711 14.8357V14.3728L14.9299 14.2795C15.013 14.4146 15.1064 14.5431 15.2093 14.6639C15.755 15.2194 16.3021 15.7736 16.8641 16.3129C17.1998 16.6337 17.6302 16.6752 17.9777 16.4782C18.3251 16.2811 18.5358 15.8682 18.4145 15.4851C18.3326 15.2564 18.1996 15.0493 18.0256 14.8797C17.0735 13.9119 16.1121 12.9532 15.1508 11.9946C14.9989 11.8432 14.8471 11.6917 14.6952 11.5403C14.0736 10.92 13.6154 10.9161 12.9996 11.5299C11.8968 12.6318 10.7949 13.7337 9.69384 14.8357C9.6879 14.8416 9.68195 14.8475 9.67601 14.8535C9.6106 14.9188 9.54519 14.9841 9.48577 15.0554C9.14871 15.4676 9.16751 15.9985 9.5279 16.342C9.87468 16.6752 10.3932 16.6843 10.7821 16.3511C10.9154 16.2368 11.0384 16.1105 11.1612 15.9844C11.1895 15.9553 11.2178 15.9263 11.2462 15.8974C11.7648 15.368 12.2833 14.8385 12.8019 14.3087L12.9095 14.3631V14.8207V22.6528C12.9095 22.6874 12.9091 22.7219 12.9088 22.7565C12.9077 22.8516 12.9067 22.9466 12.9134 23.0417C12.9536 23.6108 13.3269 23.9952 13.8332 23.9997C14.3394 24.0043 14.7238 23.6186 14.7665 23.0566C14.7742 22.9613 14.773 22.866 14.7719 22.7706C14.7715 22.7363 14.7711 22.702 14.7711 22.6677V14.8357Z" fill="#505050"/>
+									</svg>
+									<p id="fileHelp" class="fileinfo"><span class="file-drop">Drop your document here or</span> <span class="file-browse">Browse</span></p>
+									<p class="inputInstructions">Supports: PDF file up to 1GB.</p>
+									<p id="file-name-display"></p>
+								</div>
+								<span class="error-message" aria-live="polite"></span>
+							</div>
+							<button type="button" id="nextBtn" class="next-button" onclick="goToNextStep()">Next</button>
+						</div>
+						<div class="form-step" id="step2">
+							<div class="form-row">
+								<div class="form-group">
+									<label for="linkedin">LinkedIn Profile Link:</label>
+									<input type="url" id="linkedin" name="linkedin" placeholder="LinkedIn Profile Link" required>
+									<span class="error-message"></span>
+								</div>
+								<div class="form-group">
+									<label for="twitter">Twitter Profile Link:</label>
+									<input type="url" id="twitter" name="twitter" placeholder="Twitter Profile Link" required>
+									<span class="error-message"></span>
+								</div>
+							</div>
+							<div class="form-row">
+								<div class="form-group">
+									<label for="facebook">Facebook Profile Link:</label>
+									<input type="url" id="facebook" name="facebook" placeholder="Facebook Profile Link" required>
+									<span class="error-message"></span>
+								</div>
+								<div class="form-group">
+									<label for="workPreference">Where Do You Prefer To Work From?</label>
+									<select id="workPreference" name="workPreference" required>
+										<option value="">Select from list</option>
+										<option value="home">Home/Remote</option>
+										<option value="office">Office</option>
+										<option value="hybrid">Hybrid</option>
+									</select>
+									<div class="select" role="listbox">
+										<span class="value">Select from list</span>
+										<ul class="optList hidden" role="presentation">
+											<li class="option" role="option">Home/Remote</li>
+											<li class="option" role="option">Office</li>
+											<li class="option" role="option">Hybrid</li>
+										</ul>
+									</div>
+									<span class="error-message"></span>
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="checkbox--container">
+									<input type="checkbox" id="terms" name="terms" required>
+									<label for="terms">Lorem Ipsum Is A Placeholder Text Commonly Used</label>
+								</div>
+								<span class="error-message"></span>
+							</div>
+							<div class="form-actions">
+								<button type="button" id="backBtn">Back</button>
+								<button type="submit">Submit</button>
+							</div>
+						</div>
+					</form>
+					<div class="success-message" id="successMessage" style="display:none;">
+						<h2>Sent successfully</h2>
+						<div class="success-icon">
+							<!-- You can use an image or an SVG for the checkmark here -->
+							<img width="382" height="210" src="assets/images/submission-success.png" alt="Success" loading="lazy" decoding="async">
+						</div>
+						<p>Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.</p>
+					</div>
+				</div>
+			</section>
 		</main>
 		<footer class="footer" aria-labelledby="footer-info">
 			<div class="footer__container">
@@ -100,5 +235,6 @@
 		</footer>
 		<!-- External JavaScript File -->
 		<script src="./assets/javascript/main.js" async></script>
+		<script src="./assets/javascript/form.js" async></script>
 	</body>
 </html>
