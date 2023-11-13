@@ -1,14 +1,19 @@
-if (document.readyState !== 'loading') {
+// if (document.readyState !== 'loading') {
+// 	toggleMobileMenu();
+// 	// Call fetchFaqPosts function to load posts and display them
+// 	fetchFaqPosts();
+// } else {
+// 	document.addEventListener('DOMContentLoaded', (event) => {
+// 		toggleMobileMenu();
+// 		// Call fetchFaqPosts function to load posts and display them
+// 		fetchFaqPosts();
+// 	});
+// }
+
+window.addEventListener("load", () => {
 	toggleMobileMenu();
-	// // Call fetchFaqPosts function to load posts and display them
 	fetchFaqPosts();
-} else {
-	document.addEventListener('DOMContentLoaded', (event) => {
-		toggleMobileMenu();
-		// Call fetchFaqPosts function to load posts and display them
-		fetchFaqPosts();
-	});
-}
+});
 
 function toggleMobileMenu() {
 	const menuToggle = document.querySelector('.header__menu-toggle');
