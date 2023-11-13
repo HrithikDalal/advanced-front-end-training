@@ -11,6 +11,7 @@ body {
 	font-family: 'Poppins', sans-serif;
 	background: rgba(30, 85, 66, 0.09);
 	margin: 0px;
+	box-sizing: border-box;
 }
 
 /* Reset some default styling */

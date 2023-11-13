@@ -1,0 +1,337 @@
+.contact-form {
+	padding: 109px 0 98px;
+	background-color: #f5f5f5;
+}
+
+.contact-form h2 {
+	color: #161A0B;
+	text-align: center;
+	font-size: 48px;
+	font-weight: 275;
+	line-height: 60px;
+	max-width: 600px;
+	margin: 0 auto;
+}
+
+.contact-form form {
+	max-width: 796px;
+	padding-top: 55px;
+	margin: 0 auto;
+}
+
+.form-row {
+	display: flex;
+	justify-content: space-between;
+	gap: 29px;
+}
+
+.form-group {
+	display: flex;
+	flex: 1;
+	flex-direction: column;
+	margin-bottom: 1px;
+}
+
+.form-group.full-width {
+	flex-basis: 100%;
+}
+
+.contact-form label {
+	color: #161A0B;
+	font-size: 20px;
+	font-weight: 400;
+	line-height: 32px;
+	text-transform: capitalize;
+}
+
+.contact-form input:not([type="file"]),
+.contact-form select,
+.contact-form .select {
+	border-radius: 10px;
+	border: 1px solid #DCDCDC;
+	background: #FFF;
+	padding: 13px 22px;
+	color: #161A0B;
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 32px;
+	text-transform: capitalize;
+}
+
+.contact-form input:not([type="file"])::placeholder {
+	color: #BABABA;
+}
+
+.contact-form input:focus,
+.contact-form .select:focus,
+.contact-form select:focus {
+	border-color: #1E5542;
+	box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.08);
+	outline: none;
+}
+
+.contact-form select {
+	height: 60px;
+}
+
+.js-active .contact-form select,
+.no-js .contact-form .select {
+  position: absolute;
+  left: -5000em;
+  height: 0;
+  overflow: hidden;
+}
+
+.contact-form .select {
+	position: relative;
+	display: inline-block;
+}
+
+.contact-form .select .value {
+	color: #BABABA;
+}
+
+.contact-form .select .value.value--selected {
+	color: #161A0B;
+}
+
+.contact-form .select .optList {
+	position: absolute;
+	top: 100%;
+	left: 0;
+}
+
+.contact-form .select .optList.hidden {
+	max-height: 0;
+	visibility: hidden;
+}
+
+.contact-form .select .value {
+	display: inline-block;
+	width: 100%;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	vertical-align: top;
+}
+
+.contact-form .select::after {
+	content: '';
+	position: absolute;
+	background: url(../images/dropdown-arrow.svg);
+	z-index: 1;
+	height: 8px;
+	width: 12px;
+	top: 26px;
+	right: 26px;
+}
+
+.contact-form .select .optList {
+	z-index: 2;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	background: #fff;
+	box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.08);
+	border: 1px solid #DCDCDC;
+	border-radius: 0 0 10px 10px;;
+	min-width: 100%;
+}
+
+.contact-form .select .option {
+	color: #161A0B;
+	padding: 13px 21px 15px;
+}
+
+.contact-form .select .option.hidden {
+	display: none;
+}
+
+.contact-form .select .highlight {
+	background: #EBF0EE;
+}
+
+.contact-form input[type="date"] {
+	text-transform: uppercase;
+	padding: 12px 22px;
+}
+
+.contact-form .error-message {
+	color: #F41027;
+	font-family: Lato;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 30px;
+	height: 30px;
+}
+
+.contact-form .form-step {
+	display: none;
+}
+
+.contact-form .form-step.active {
+	display: flex;
+}
+
+.form-group.error input,
+.form-group.error select {
+	border-color: red; /* Style for input fields with errors */
+}
+
+/* Gender Toggle Styles */
+.gender-toggle .switch-field {
+	display: flex;
+	overflow: hidden;
+	border-radius: 10px;
+	border: 1px solid #DCDCDC;
+	background: #FFF;
+	justify-content: space-between;
+	padding: 9px 10px;
+	gap: 10px;
+}
+
+.switch-field input {
+	position: absolute !important;
+	clip: rect(0, 0, 0, 0);
+	height: 1px;
+	width: 1px;
+	border: 0;
+	overflow: hidden;
+}
+
+.switch-field label {
+	color: #161A0B;
+	text-align: center;
+	font-family: Poppins;
+	font-size: 18px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 32px;
+	text-transform: capitalize;
+	padding: 4px 55px;
+	border-radius: 5px;
+}
+
+.switch-field label:hover {
+	cursor: pointer;
+}
+
+.switch-field input:checked + label {
+	color: #FFF;
+	background-color: #1E5542;
+	box-shadow: none;
+}
+
+
+/* Brief Description File Upload Styles */
+.brief-description .file-upload {
+	border: 2px solid #D3D3D3;
+	padding: 20px;
+	cursor: pointer;
+	text-align: center;
+	position: relative;
+}
+
+.brief-description .file-upload:hover {
+	border-color: #aaa;
+}
+
+.brief-description .file-upload input[type="file"] {
+	opacity: 0;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	cursor: pointer;
+}
+
+.brief-description p {
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 30px;
+	margin: 0;
+}
+
+.brief-description .inputInstructions {
+	color: #8C8C8C;
+	margin-top: -5px;
+}
+
+.brief-description .file-drop {
+	color: #161A0B;
+	font-size: 18px;
+}
+
+.brief-description .file-browse {
+	color: #1E5542;
+	font-size: 18px;
+	font-weight: 600;
+}
+
+/* Hide the input if JavaScript is disabled */
+.no-js .file-upload .file-drop {
+	display: none;
+}
+
+.form-step {
+	display: none;
+	flex-direction: column;
+}
+
+input[type="url"] {
+	padding: 0.5em;
+	margin-top: 0.5em;
+	border: 1px solid #ccc;
+	border-radius: 0.25em;
+}
+
+input[type="checkbox"] {
+	margin-right: 0.5em;
+}
+
+.form-actions {
+	display: flex;
+	justify-content: space-between;
+}
+
+.next-button {
+	color: #FFF;
+	text-align: center;
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 30px;
+	border: none;
+	border-radius: 32px;
+	background: #1E5542;
+	padding: 15px 33px;
+	width: 189px;
+	align-self: flex-end;
+	margin-top: 9px;
+	cursor: pointer;
+}
+
+button#backBtn {
+	background-color: #ccc;
+	color: #000;
+}
+
+button[type="submit"] {
+	background-color: #4caf50;
+	color: #fff;
+}
+
+.success-message {
+	text-align: center;
+	padding: 2em;
+}
+
+.success-message h2 {
+	color: #4CAF50; /* Adjust color according to your branding */
+	margin-bottom: 0.5em;
+}
+
+.success-message p {
+	color: #666; /* Adjust color according to your design */
+	margin-top: 0.5em;
+}
